@@ -1,60 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Crystal Collector</title>
     <!-- Reset stylesheet -->
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/reset.css" />
     <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
     <!-- Header with title of the game -->
     <header id="main-header">
-        <h1>Crystal Collector</h1>
+      <h1>Crystal Collector</h1>
     </header>
 
     <!-- Game directions section-->
     <div id="directions" class="container">
-        <p>You will be given a random target number at the start of the game.</p>
-        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
-        <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
-        <p>But wait! The value of each crystal is hidden from you until you click on it.</p>
-        <p>Each time when the game starts, the value of each crystal will change.</p>
+      <h2>How to Play!</h2>
+      <p>You will be given a random target number at the start of the game.</p>
+      <p>
+        There are four crystals below. By clicking on a crystal, you will add a
+        specific amount of points to your total score.
+      </p>
+      <p>
+        You win the game by matching your total score to the random number. You
+        lose the game if your total score goes above the random number.
+      </p>
+      <p>
+        But wait! The value of each crystal is hidden from you until you click
+        on it.
+      </p>
+      <p>
+        Each time when the game starts, the value of each crystal will change.
+      </p>
     </div>
 
     <!-- Game section-->
     <div id="game-section" class="container">
+      <!-- section for placing target number box and wins and losses side by side -->
+      <div id="game-status">
         <!-- target number for the game-->
-        <div id="target-number-box">
-            Your target number is:
-            <div id="target-number-text"></div>
+        <div id="target-number-box" class="game-status-box">
+          Your target number is:
+          <div id="target-number-text"></div>
         </div>
 
         <!-- wins and losses -->
-        <div id="wins-and-losses-box">
-            Wins: <span id="wins-text">0</span>
-            Losses: <span id="losses-text">0</span>
+        <div id="wins-and-losses-box" class="game-status-box">
+          Wins: <span id="wins-text">0</span> Losses:
+          <span id="losses-text">0</span>
         </div>
+      </div>
 
-        <!-- crystal pieces -->
-        <div id="crystals">
-            <img src="assets/images/crystal-1.png" alt="Crystal Piece 1" id="crystal-1">
-            <img src="assets/images/crystal-2.png" alt="Crystal Piece 2" id="crystal-2">
-            <img src="assets/images/crystal-3.png" alt="Crystal Piece 3" id="crystal-3">
-            <img src="assets/images/crystal-4.png" alt="Crystal Piece 4" id="crystal-4">
-        </div>
+      <!-- current score -->
+      <div id="current-score-box">
+        Your total score is:
+        <div id="current-score-text">0</div>
+        <button id="restart-game">Play Again</button>
+      </div>
 
-        <!-- current score -->
-        <div id="current-score-box">
-            Your total score is:
-            <div id="current-score-text">0</div>
-        </div>
+      <!-- crystal pieces -->
+      <div id="crystals">
+        <img
+          src="assets/images/crystal-1.png"
+          alt="Crystal 1"
+          id="crystal-1"
+          class="crystal-image"
+        />
+        <img
+          src="assets/images/crystal-2.png"
+          alt="Crystal 2"
+          id="crystal-2"
+          class="crystal-image"
+        />
+        <img
+          src="assets/images/crystal-3.png"
+          alt="Crystal 3"
+          id="crystal-3"
+          class="crystal-image"
+        />
+        <img
+          src="assets/images/crystal-4.png"
+          alt="Crystal 4"
+          id="crystal-4"
+          class="crystal-image"
+        />
+      </div>
     </div>
-    
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
     <script src="assets/javascript/game.js"></script>
-</body>
+  </body>
 </html>

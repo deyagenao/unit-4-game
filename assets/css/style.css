@@ -51,24 +51,44 @@ h1 {
 }
 
 #target-number-box {
-
+    background-color:#FEF7FB;
+    float: left;
+    width: 250px;
+    height: 100px;
 }
 
 #wins-and-losses-box {
-
+    background-color:#FEF7FB;
+    float: right;
+    width: 150px;
+    height: 100px;
 }
 
-#crystals {
+#game-status {
+    display: inline-block;
+    margin: 0 auto;
+}
 
+.game-status-box {
+    margin: 20px;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 #current-score-box {
     background-color: #FA7EB3;
     opacity: 1.0;
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
 }
 
 img {
     height: 150px;
     width: 150px;
     display: inline-block;
+}
+
+button {
+    display: none;
 }
